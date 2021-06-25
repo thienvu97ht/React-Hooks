@@ -1,0 +1,8 @@
+.todo-list li {
+  cursor: pointer;
+  margin: 10px 0;
+
+  &:hover {
+    background-color: rgba(204, 204, 204, 0.4);
+  }
+}
