@@ -1,13 +1,14 @@
-import React, { useEffect, useState } from "react";
-import "./App.scss";
-import { v4 as uuidv4 } from "uuid";
 import queryString from "query-string";
+import React, { useEffect, useState } from "react";
+import { v4 as uuidv4 } from "uuid";
+import "./App.scss";
+import BetterClock from "./components/BetterClock";
+import Clock from "./components/Clock";
+import Pagination from "./components/Pagination";
+import PostFiltersForm from "./components/PostFiltersForm";
 // import TodoList from "./components/TodoList/index";
 // import TodoForm from "./components/TodoForm/index";
 import PostList from "./components/PostList";
-import Pagination from "./components/Pagination";
-import PostFiltersForm from "./components/PostFiltersForm";
-import Clock from "./components/Clock";
 
 function App() {
   const [todoList, setTodoList] = useState([
@@ -97,6 +98,7 @@ function App() {
       <TodoList todos={todoList} onTodoClick={handleTodoClick} /> */}
 
       {showClock && <Clock />}
+      <BetterClock />
       <button onClick={() => setShowClock(!showClock)}>Hide Clock</button>
 
       <PostFiltersForm onSubmit={handleFiltersChange} />
