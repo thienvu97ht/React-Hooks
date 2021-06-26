@@ -6,6 +6,7 @@ import BetterClock from "./components/BetterClock";
 import Clock from "./components/Clock";
 import Pagination from "./components/Pagination";
 import PostFiltersForm from "./components/PostFiltersForm";
+import MagicBox from "./components/MagicBox";
 // import TodoList from "./components/TodoList/index";
 // import TodoForm from "./components/TodoForm/index";
 import PostList from "./components/PostList";
@@ -92,18 +93,19 @@ function App() {
 
   return (
     <div className="app">
-      <h1>React hooks - PostList</h1>
+      <h1>React hooks - MagicBox</h1>
+      <MagicBox />
 
       {/* <TodoForm onSubmit={handleTodoFormSubmit} />
       <TodoList todos={todoList} onTodoClick={handleTodoClick} /> */}
-
+      {/* 
       {showClock && <Clock />}
       <BetterClock />
       <button onClick={() => setShowClock(!showClock)}>Hide Clock</button>
 
       <PostFiltersForm onSubmit={handleFiltersChange} />
       <PostList posts={postList} />
-      <Pagination pagination={pagination} onPageChange={handlePageChange} />
+      <Pagination pagination={pagination} onPageChange={handlePageChange} /> */}
     </div>
   );
 }
