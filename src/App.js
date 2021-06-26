@@ -7,6 +7,7 @@ import queryString from "query-string";
 import PostList from "./components/PostList";
 import Pagination from "./components/Pagination";
 import PostFiltersForm from "./components/PostFiltersForm";
+import Clock from "./components/Clock";
 
 function App() {
   const [todoList, setTodoList] = useState([
@@ -27,6 +28,8 @@ function App() {
     _page: 1,
     title_like: "",
   });
+
+  const [showClock, setShowClock] = useState(true);
 
   useEffect(() => {
     async function fetchPostList() {
@@ -92,6 +95,9 @@ function App() {
 
       {/* <TodoForm onSubmit={handleTodoFormSubmit} />
       <TodoList todos={todoList} onTodoClick={handleTodoClick} /> */}
+
+      {showClock && <Clock />}
+      <button onClick={() => setShowClock(!showClock)}>Hide Clock</button>
 
       <PostFiltersForm onSubmit={handleFiltersChange} />
       <PostList posts={postList} />
